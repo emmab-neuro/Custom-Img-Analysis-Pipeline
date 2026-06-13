@@ -1,7 +1,7 @@
 # Custom-Img-Analysis-Pipeline
 I will be improving my original data pipeline that I used for my master's project using realistic test data. The pipeline is structured slightly inefficiently to accommodate for project adjustments, and I want to create a more seamless pipeline now that the order of operations has been established.
 
-**GOAL** - clean up Python scripts and eliminate the need for more than 1 intermediary Excel file within the pipeline
+_**GOAL: clean up Python scripts and eliminate the need for more than 1 intermediary Excel file within the pipeline**_
 
 # $\color{blue}{\text{Folders}}$
 
@@ -16,7 +16,7 @@ I will be improving my original data pipeline that I used for my master's projec
 
 # The Pipeline
 
-Software Worflow
+Software Workflow
 
 ```mermaid
 graph TD;
