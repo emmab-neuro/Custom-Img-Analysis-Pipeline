@@ -1,6 +1,8 @@
 # Custom-Img-Analysis-Pipeline
 I will be improving my original data pipeline that I used for my master's project using realistic test data. The pipeline is structured slightly inefficiently to accommodate for project adjustments, and I want to create a more seamless pipeline now that the order of operations has been established.
 
+**GOAL** - clean up Python scripts and eliminate the need for more than 1 intermediary Excel file within the pipeline
+
 # $\color{blue}{\text{Folders}}$
 
 1. $\color{Turquoise}{\text{Raw FIJI Test Data - Snapshots}}$ : samples of raw image data to be processed in the pipeline
