@@ -5,12 +5,14 @@ _**GOAL: clean up Python scripts and eliminate the need for more than 1 intermed
 
 # $\color{blue}{\text{Folders}}$
 
-1. $\color{Turquoise}{\text{Raw FIJI Test Data - Snapshots}}$ : samples of raw image data to be processed in the pipeline
+1. $\color{Turquoise}{\text{Raw FIJI Test Data - Snapshots}}$ :
+   - samples of raw image data to be processed in the pipeline (CSV files)
+   - more comprehensive overview of the data collection
 2. $\color{aquamarine}{\text{Primary Processing}}$ :
    - Python scripts that import the raw image data to Jupyter Notebook and export the processed results to Excel
    - CSV files showing the exported results that were sent to each Excel sheet
 
-4. $\color{Gold}{\text{Final Analysis}}$ :
+3. $\color{Gold}{\text{Final Analysis}}$ :
    - Python scripts that import the previously processed results (the exports from Primary Processing) to Jupyter Notebook and export the final statistical analysis to Excel
    - CSV files showing the final exported statistical findings that were sent to each Excel sheet
 
@@ -21,12 +23,12 @@ Software Workflow
 ```mermaid
 graph TD;
     subgraph ide1 ["ACTIVE USER WORKSPACE"]
-    A[Airyscan]== CZIs ===> B["FIJI (IJM w/ Read & Write Excel plugin)"]
-    B["FIJI (IJM w/ Read & Write Excel plugin)"]-.-x D["Jupyter Notebook (IPYNB)"]
+    A[Airyscan]== CZIs ===> B["FIJI (IJM w/ Excel plugin)"]
+    B["FIJI (IJM w/ Excel plugin)"]-.-x D["Jupyter Notebook (IPYNB)"]
     end
 
     subgraph ide2 ["STORAGE INTERMEDIARY"]
-    B["FIJI (IJM w/ Read & Write Excel plugin)"]== bridge XLSX ===> C[Excel]
+    B["FIJI (IJM w/ Excel plugin)"]== bridge XLSX ===> C[Excel]
     C[Excel]===> D["Jupyter Notebook (IPYNB)"]
     D["Jupyter Notebook (IPYNB)"]== bridge XLSX ===> C[Excel]
     end
@@ -39,8 +41,8 @@ graph TD;
     F[SPSS]
     end
 
-    style ide1 fill:#99f,stroke:#f73,stroke-width:4px,color:#fff,font-size: 16
-    style ide2 fill:#19f,stroke:#00f,stroke-width:4px,color:#fff,font-size: 16,stroke-dasharray: 10 5
+    style ide1 fill:#99f,stroke:#f73,stroke-width:4px,color:#fff
+    style ide2 fill:#19f,stroke:#00f,stroke-width:4px,color:#fff,stroke-dasharray: 10 5
     style E fill:#9f9,stroke:#0d9,stroke-width:4px,color:#000
     style F fill:#9f9,stroke:#0d9,stroke-width:4px,color:#000
 ```
